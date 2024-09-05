@@ -1,0 +1,109 @@
+#extstatus {
+    width: 100%;
+}
+
+#extstatus_top {
+    width: 100%;
+}
+
+#extstatus_table {
+    width: 100%;
+    margin-top: 1em;
+    font-size: medium;
+}
+
+#extstatus_table thead tr {
+    width: 100%;
+    background-color: #343538;
+    color: white;
+}
+
+#extstatus_table tbody tr {
+    width: 100%;
+    background-color: #f0efef;
+    color: #262626;
+}
+
+#extstatus_table tbody tr:nth-child(even) {
+    background-color: #dedddd !important;
+}
+
+#extstatus_table td {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.line_status div {
+    height: 60px;
+    line-height: 60px;
+    margin: 10px 5px 10px 5px;
+}
+
+.line_status .green {
+    background-color: #00cc00;
+}
+
+.line_status .yellow {
+    background-color: #ffff00;
+}
+
+.line_status .red {
+    background-color: #e60000;
+}
+
+@media only screen and (max-width: 800px) {
+    thead {
+        display: none;
+    }
+
+    table, tbody, td, tr {
+        display: block;
+    }
+
+    td {
+        position: relative;
+        padding-left: 160px !important;
+        text-align: left !important;
+    }
+
+    .line_status div {
+        height: auto;
+        line-height: normal;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        background-color: transparent !important;
+    }
+
+    .line_status .green {
+        color: #00cc00;
+    }
+
+    .line_status .yellow {
+        color: #ffff00;
+    }
+
+    .line_status .red {
+        color: #e60000;
+    }
+
+    td:before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 150px;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    .line_id:before { content: "Line" }
+    .line_batch:before { content: "Batch" }
+    .line_item:before { content: "Item" }
+    .line_time:before { content: "Time Left (Hours)" }
+    .line_status:before { content: "Status" }
+    .line_lots:before { content: "Lots Remaining" }
+}
